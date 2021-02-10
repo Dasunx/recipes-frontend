@@ -26,7 +26,7 @@ const Register = () => {
 
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/auth/',
+				'https://recipes-backend-2021.herokuapp.com/api/auth/',
 				body,
 				{ ContentType: 'application/json' }
 			);
@@ -43,9 +43,6 @@ const Register = () => {
 					true
 				);
 			}
-			// if (response.data.success == 1) {
-			// 	auth.login(response.data.token, response.data.user);
-			// }
 		} catch (error) {
 			notification.showNotification(
 				'please check your credentials',

@@ -14,17 +14,15 @@ const MyRecipe = () => {
 	useEffect(async () => {
 		try {
 			const response = await axios.get(
-				'http://localhost:5000/api/recipe'
+				'https://recipes-backend-2021.herokuapp.com/api/recipe'
 			);
 			setIsLoading(false);
-			console.log(response.data.recipes);
 
 			setRecipes(response.data.recipes);
 		} catch (error) {}
 	}, []);
 
 	const deleteItem = async (id) => {
-		console.log(auth.token);
 		const config = {
 			headers: {
 				'x-auth-token': `${auth.token}`,
@@ -36,7 +34,7 @@ const MyRecipe = () => {
 				recipeId: id
 			};
 			const response = await axios.post(
-				'http://localhost:5000/api/recipe/delete',
+				'https://recipes-backend-2021.herokuapp.com/api/recipe/delete',
 				body,
 				config
 			);
