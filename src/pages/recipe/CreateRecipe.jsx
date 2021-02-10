@@ -28,8 +28,6 @@ const CreateRecipe = () => {
 			...ingredient,
 			[e.target.name]: e.target.value
 		});
-
-		console.log(ingredient);
 	};
 	const onIngredientSubmit = async (e) => {
 		e.preventDefault();
@@ -50,7 +48,7 @@ const CreateRecipe = () => {
 			...recipe,
 			ingredients: ingredients
 		};
-		console.log(body);
+
 		const config = {
 			headers: {
 				'x-auth-token': `${auth.token}`,
@@ -59,12 +57,10 @@ const CreateRecipe = () => {
 		};
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/recipe/add',
+				'https://recipes-backend-2021.herokuapp.com/recipe/add',
 				body,
 				config
 			);
-
-			console.log(response.data);
 
 			if (response.data) {
 				notification.showNotification('Successfully added', false);

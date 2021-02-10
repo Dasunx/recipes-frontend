@@ -12,7 +12,7 @@ const Home = () => {
 	useEffect(async () => {
 		try {
 			const response = await axios.get(
-				'http://localhost:5000/api/recipe'
+				'https://recipes-backend-2021.herokuapp.com/api/recipe'
 			);
 			setIsLoading(false);
 			console.log(response.data.recipes);

@@ -23,15 +23,10 @@ const Login = () => {
 
 		try {
 			const response = await axios.post(
-				'http://localhost:5000/api/auth/login',
+				'https://recipes-backend-2021.herokuapp.com/api/auth/login',
 				body,
 				{ ContentType: 'application/json' }
 			);
-			// const response = await axios.post(
-			// 	'http://localhost/php-auth/login.php',
-			// 	body,
-			// 	{ ContentType: 'application/json' }
-			// );
 
 			if (response.data.token != null) {
 				auth.authenticate(
@@ -45,9 +40,6 @@ const Login = () => {
 					true
 				);
 			}
-			// if (response.data.success == 1) {
-			// 	auth.login(response.data.token, response.data.user);
-			// }
 		} catch (error) {
 			notification.showNotification(
 				'please check your credentials',
