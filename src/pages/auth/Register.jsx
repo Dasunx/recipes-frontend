@@ -26,7 +26,7 @@ const Register = () => {
 
 		try {
 			const response = await axios.post(
-				'https://recipes-backend-2021.herokuapp.com/api/auth/',
+				'http://localhost:5000/api/auth/',
 				body,
 				{ ContentType: 'application/json' }
 			);

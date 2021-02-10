@@ -57,7 +57,7 @@ const CreateRecipe = () => {
 		};
 		try {
 			const response = await axios.post(
-				'https://recipes-backend-2021.herokuapp.com/recipe/add',
+				'http://localhost:5000/recipe/add',
 				body,
 				config
 			);
