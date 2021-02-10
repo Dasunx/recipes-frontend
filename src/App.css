@@ -1,38 +1,133 @@
 .App {
-  text-align: center;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.row {
+	--bs-gutter-x: 0 im !important;
+}
+
+.card-img-top {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.home-intro-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home-intro-row {
+	padding-top: 10vh !important;
+}
+.home-intro-text {
+	font-family: 'Abril Fatface', cursive;
+	color: white;
+	font-size: 5rem;
+}
+.home-intro-col {
+	text-align: center !important;
+}
+@media only screen and (max-width: 600px) {
+	.home-intro-text {
+		font-size: 3rem;
+	}
+	.home-intro-col {
+		text-align: center !important;
+	}
+}
+.mark {
+	color: #fff;
+	background-color: #21b;
+	height: 100%;
+	width: 100%;
+	padding: 0.1em;
+	box-sizing: content-box;
+}
+
+.container-fluid {
+	padding-left: 0 !important;
+}
+
+.add-recipe {
+	border: 1px solid;
+	padding: 10px;
+	box-shadow: 5px 10px;
+	width: 90%;
+}
+.add-recipe-form {
+}
+
+.ingredient-form {
+	margin: 20px 0;
+	border: 1px solid;
+	padding: 10px;
+	box-shadow: 2px 4px;
+}
+
+.notification-wrapper {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.notification-container {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+.navbar-brand {
+	font-size: 1.5rem;
+	background-image: linear-gradient(90deg, #4ecaba, #a2b8ff);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent !important;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.recipe-view-title {
+	font-size: 25px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.recipe-view-image {
+	background-repeat: no-repeat;
+	background-size: cover;
 }
